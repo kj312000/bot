@@ -4,7 +4,8 @@ import random
 from ecdsa import SigningKey, SECP256k1
 import requests
 import time
-import random  # Replace this with your actual logic
+import random
+from dotenv import load_dotenv
 
 # Replace with your bot token and user ID
 # Load environment variables from .env file

@@ -6,9 +6,7 @@ scripts = [
     'script3.py',
     'script4.py',
     'script5.py',
-    'script6.py',
-    'script7.py',
-    'script8.py'
+    'script6.py'
 ]
 
 for script in scripts:
