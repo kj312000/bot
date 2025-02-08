@@ -6,6 +6,7 @@ import requests
 import time
 import random 
 from dotenv import load_dotenv
+import os
 
 # Replace with your bot token and user ID
 # Load environment variables from .env file
@@ -69,6 +70,7 @@ def send_telegram_message(message):
     requests.post(url, data=data)
 
 def main():
+    print('running')
     match_found = False
     while not match_found:
         match_found = generate_keys_around_random()

@@ -1,4 +1,5 @@
 import subprocess
+from concurrent.futures import ThreadPoolExecutor
 
 scripts = [
     'script1.py',
@@ -9,8 +10,13 @@ scripts = [
     'script6.py'
 ]
 
-for script in scripts:
+def run_script(script):
     try:
+        print(f"Running {script}...")
         subprocess.run(['python', script], check=True)
     except subprocess.CalledProcessError as e:
         print(f"Error occurred while running {script}: {e}")
+
+with ThreadPoolExecutor() as executor:
+    # Execute the scripts in parallel
+    executor.map(run_script, scripts)
