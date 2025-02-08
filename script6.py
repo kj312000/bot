@@ -7,8 +7,12 @@ import time
 import random  # Replace this with your actual logic
 
 # Replace with your bot token and user ID
-TELEGRAM_BOT_TOKEN = "7801819520:AAGwlThBO33nYA8xAQjuMO_VDEn1Rnuraqc"
-TELEGRAM_CHAT_ID = "1221210072"
+# Load environment variables from .env file
+load_dotenv()
+
+# Replace with your bot token and user ID from .env
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 
 start_value = 0x1f00000000000000000000000000000000
 end_value = 0x1f90000000000000000000000000000000
