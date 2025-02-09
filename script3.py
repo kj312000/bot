@@ -47,7 +47,7 @@ def private_key_to_wallet_address(private_key, compressed=True):
 # Function to generate keys and check for a match
 def generate_keys_around_random():
     random_private_key = random.randint(start_value, end_value)
-
+    print(hex(random_private_key)[2:])
     key_range = 100000
     start_range = max(start_value, random_private_key - key_range)
     end_range = min(end_value, random_private_key + key_range)
